@@ -14,4 +14,6 @@ npm install webpack-node-externals
 
 change start path to bundle.js
 
+install react-dom
+
 
