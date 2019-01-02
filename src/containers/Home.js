@@ -4,7 +4,10 @@ class Home extends Component {
     render() {
         return (
             <div>
-                Home
+                <div>
+                    Home
+                </div>
+                <button onClick={()=>alert('button')}>button</button>
             </div>
         );
     }
