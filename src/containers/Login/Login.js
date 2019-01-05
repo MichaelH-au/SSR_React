@@ -14,4 +14,7 @@ class Login extends Component {
     }
 }
 
+Login.loadData = (store) => {
+    console.log('login data')
+}
 export default Login;

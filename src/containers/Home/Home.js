@@ -5,7 +5,10 @@ import { getHomeList } from './store/actions'
 
 class Home extends Component {
     componentDidMount(){
-        this.props.getHomeList()
+        //avoid duplicate request
+        if (!this.props.list.length) {
+            this.props.getHomeList()
+        }
     }
     render() {
         return (
@@ -23,6 +26,9 @@ class Home extends Component {
             </div>
         );
     }
+}
+Home.loadData = (store) => {
+    return store.dispatch(getHomeList())
 }
 
 const mapStateToProps = state => ({

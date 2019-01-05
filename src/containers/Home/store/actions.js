@@ -7,7 +7,23 @@ const changeList = (list) => ({
 })
 export const getHomeList = () => {
     return (dispatch) => {
-        const list = ['aaa', 'bbb', 'ccc'];
-        dispatch(changeList(list))
+        let promise1 = new Promise(function(resolve, reject) {
+            resolve()
+        });
+        return promise1.then(()=>{
+            const list = ['aaa', 'bbb', 'ccc'];
+            dispatch(changeList(list))
+        });
+
+        /**
+         *  async data loading
+         *  axios.get('https://....')
+         *  .then((res) => {
+         *      const list = res.data.list
+         *      dispatch(changeList(list))
+         *  })
+         *
+         *
+         * */
     }
 }
